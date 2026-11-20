@@ -15,19 +15,16 @@ Static site for Natcha Tong Nong Ga, registered NDIS provider 4050137180.
 | Name | Hex | Used for |
 |---|---|---|
 | Ink | `#0D0D0D` | Page ground, headers, footers |
-| Ochre | `#FFC80B` | Buttons and links on dark. Black text on it, always |
-| Ochre hover | `#E6B400` | Button hover |
-| Red | `#ED1C24` | Accent only, rules and markers |
-| Red on light | `#C2151C` | Red as text or a link on a light ground |
-| Paper | `#FAF8F4` | Light sections |
-| Sand | `#EFE9DF` | Quiet bands and cards on light |
+| Paper | `#FAFAFA` | Light sections, and buttons on the dark sections |
+| Smoke | `#EFEFEF` | Quiet bands and cards on light |
 | Slate | `#171717` | Cards on Ink |
 | Border dark | `#2A2A2A` | Borders on dark |
-| Border light | `#E2DCD2` | Borders on light |
-| Muted dark | `#9A9A9A`, `#B8B4AE` | Secondary text on dark |
-| Muted light | `#5A5A5A` | Secondary text on light |
+| Border light | `#E0E0E0` | Borders on light, and button hover |
+| Graphite | `#5A5A5A` | Secondary text on light |
+| Silver | `#9A9A9A`, `#B5B5B5` | Secondary text on dark |
 
-Ochre is never used as text on white.
+Black and white only. Buttons are white with black text on the dark sections
+(`.btn-primary`) and black with white text on the light ones (`.btn-dark`).
 
 ## Type
 Outfit for headings, 400 to 800. Inter for body, 400 to 600. Both load from Google Fonts.
