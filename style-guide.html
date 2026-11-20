@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design direction, Natcha NDIS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<style>
+body { margin: 0; font-family: Inter, system-ui, sans-serif; background: #0D0D0D; color: #FAF8F4; }
+h1, h2, h3, .display { font-family: Outfit, system-ui, sans-serif; letter-spacing: -0.02em; }
+a { color: #FFC80B; }
+a:hover { color: #FAF8F4; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 48px; }
+.label { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: #FFC80B; }
+.card { background: #171717; border: 1px solid #2A2A2A; border-radius: 8px; }
+.sw { height: 120px; border-radius: 6px 6px 0 0; }
+.swbody { padding: 14px 16px; }
+.swhex { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: #9A9A9A; }
+</style>
+<style>
+/* Column counts, lifted off the inline styles so they can collapse */
+.g2, .g3, .g4 { display: grid; }
+.g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1000px) {
+  .g3, .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .g2, .g3, .g4 { grid-template-columns: minmax(0, 1fr); }
+}
+/* Phone and small tablet */
+@media (max-width: 760px) {
+  .wrap { padding-inline: max(20px, env(safe-area-inset-left, 0px)) !important; }
+  h1 { font-size: 38px !important; line-height: 1.1 !important; }
+  h2 { font-size: 28px !important; line-height: 1.18 !important; }
+  h3 { font-size: 21px !important; }
+  img { max-width: 100%; height: auto; }
+}
+</style>
+</head>
+<body>
+<div style="width: 100%">
+
+  <!-- Header -->
+  <section class="wrap" style="padding-block: 64px 48px; display: flex; flex-wrap: wrap; align-items: center; gap: 40px">
+    <img src="images/logo-full-colour.png" alt="Natcha Tong Nong Ga" style="width: 150px; height: auto; display: block">
+    <div style="flex: 1 1 400px; min-width: 0">
+      <p class="label" style="margin: 0 0 12px">Design direction</p>
+      <h1 style="margin: 0 0 14px; font-size: 48px; line-height: 1.05; font-weight: 800">Natcha NDIS</h1>
+      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B8B4AE; max-width: 560px">Colour and structure drawn from the mark itself. Black, red and ochre are already the brand, they have just never been used on the site.</p>
+    </div>
+  </section>
+
+  <!-- Palette -->
+  <section class="wrap" style="padding-bottom: 56px">
+    <h2 style="margin: 0 0 8px; font-size: 28px; font-weight: 700">Colour</h2>
+    <p style="margin: 0 0 28px; font-size: 16px; line-height: 1.6; color: #9A9A9A; max-width: 620px">Every colour below is lifted straight out of the logo. The roles matter more than the colours: red is a highlight, never a background, because a page of red reads as a warning.</p>
+
+    <div class="g3" style="display: grid; gap: 18px; margin-bottom: 18px">
+      <div class="card">
+        <div class="sw" style="background: #0D0D0D; border-bottom: 1px solid #2A2A2A"></div>
+        <div class="swbody">
+          <p style="margin: 0 0 3px; font-weight: 600; font-size: 16px">Ink</p>
+          <p class="swhex" style="margin: 0 0 8px">#0D0D0D</p>
+          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #9A9A9A">Page ground, headers, footers. The dominant colour.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="sw" style="background: #FFC80B"></div>
+        <div class="swbody">
+          <p style="margin: 0 0 3px; font-weight: 600; font-size: 16px">Ochre</p>
+          <p class="swhex" style="margin: 0 0 8px">#FFC80B</p>
+          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #9A9A9A">Every button and every link. Black text on it, always.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="sw" style="background: #ED1C24"></div>
+        <div class="swbody">
+          <p style="margin: 0 0 3px; font-weight: 600; font-size: 16px">Red</p>
+          <p class="swhex" style="margin: 0 0 8px">#ED1C24</p>
+          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #9A9A9A">Accent only. Rules, underlines, the odd marker. Never a block.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="sw" style="background: #FAF8F4"></div>
+        <div class="swbody">
+          <p style="margin: 0 0 3px; font-weight: 600; font-size: 16px">Paper</p>
+          <p class="swhex" style="margin: 0 0 8px">#FAF8F4</p>
+          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #9A9A9A">Light sections, so the page is not black end to end.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="sw" style="background: #EFE9DF"></div>
+        <div class="swbody">
+          <p style="margin: 0 0 3px; font-weight: 600; font-size: 16px">Sand</p>
+          <p class="swhex" style="margin: 0 0 8px">#EFE9DF</p>
+          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #9A9A9A">Quiet bands and cards on the light sections.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="sw" style="background: #171717; border-bottom: 1px solid #2A2A2A"></div>
+        <div class="swbody">
+          <p style="margin: 0 0 3px; font-weight: 600; font-size: 16px">Slate</p>
+          <p class="swhex" style="margin: 0 0 8px">#171717</p>
+          <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #9A9A9A">Cards sitting on Ink, so panels separate without a border.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="padding: 20px 24px; border-left: 3px solid #ED1C24">
+      <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #B8B4AE"><strong style="color: #FAF8F4">One rule worth holding.</strong> Red on a light background fails readability at small sizes. Where red text is needed on Paper or Sand, it darkens to <span class="swhex" style="color: #FAF8F4">#C2151C</span>. Ochre is never used as text on white.</p>
+    </div>
+  </section>
+
+  <!-- Type -->
+  <section class="wrap" style="padding-bottom: 56px">
+    <h2 style="margin: 0 0 8px; font-size: 28px; font-weight: 700">Type</h2>
+    <p style="margin: 0 0 28px; font-size: 16px; line-height: 1.6; color: #9A9A9A">Outfit for headings, Inter for everything else. Both free in Squarespace.</p>
+    <div class="card" style="padding: 36px 40px">
+      <p class="display" style="margin: 0 0 6px; font-size: 56px; line-height: 1.05; font-weight: 800">Support that holds</p>
+      <p class="swhex" style="margin: 0 0 28px">Outfit 800, 56px, page heading</p>
+      <p class="display" style="margin: 0 0 6px; font-size: 34px; line-height: 1.12; font-weight: 600">What we do</p>
+      <p class="swhex" style="margin: 0 0 28px">Outfit 600, 34px, section heading</p>
+      <p style="margin: 0 0 6px; font-size: 18px; line-height: 1.7; max-width: 640px">We are a registered NDIS provider working with people living with psychosocial disability and complex histories. Small, steady teams, supports that hold.</p>
+      <p class="swhex" style="margin: 0">Inter 400, 18px, body</p>
+    </div>
+  </section>
+
+  <!-- Components -->
+  <section class="wrap" style="padding-bottom: 56px">
+    <h2 style="margin: 0 0 28px; font-size: 28px; font-weight: 700">Components</h2>
+    <div class="g2" style="display: grid; gap: 18px">
+      <div class="card" style="padding: 32px">
+        <p class="label" style="margin: 0 0 18px">Buttons</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px">
+          <span style="display: inline-block; padding: 15px 26px; border-radius: 4px; background: #FFC80B; color: #0D0D0D; font-weight: 700; font-size: 16px">Make a referral</span>
+          <span style="display: inline-block; padding: 15px 26px; border-radius: 4px; border: 1.5px solid #FAF8F4; color: #FAF8F4; font-weight: 600; font-size: 16px">See our services</span>
+        </div>
+      </div>
+      <div class="card" style="padding: 32px">
+        <p class="label" style="margin: 0 0 18px">On a light section</p>
+        <div style="background: #FAF8F4; border-radius: 6px; padding: 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+          <span style="display: inline-block; padding: 15px 26px; border-radius: 4px; background: #0D0D0D; color: #FFC80B; font-weight: 700; font-size: 16px">Make a referral</span>
+          <span style="color: #C2151C; font-weight: 600; font-size: 16px; text-decoration: underline">A text link</span>
+        </div>
+      </div>
+      <div class="card" style="padding: 32px">
+        <p class="label" style="margin: 0 0 18px">Service card</p>
+        <div style="background: #0D0D0D; border: 1px solid #2A2A2A; border-top: 3px solid #FFC80B; border-radius: 6px; padding: 24px">
+          <h3 style="margin: 0 0 8px; font-size: 20px; font-weight: 600">Support coordination</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #9A9A9A">Plan implementation, crisis and transition support, justice transitions.</p>
+        </div>
+      </div>
+      <div class="card" style="padding: 32px">
+        <p class="label" style="margin: 0 0 18px">Section divider</p>
+        <div style="display: flex; align-items: center; gap: 0; height: 68px">
+          <span style="flex: 1; height: 3px; background: #0D0D0D"></span>
+          <span style="flex: 1; height: 3px; background: #ED1C24"></span>
+          <span style="flex: 1; height: 3px; background: #FFC80B"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Structure -->
+  <section class="wrap" style="padding-bottom: 72px">
+    <h2 style="margin: 0 0 8px; font-size: 28px; font-weight: 700">Structure</h2>
+    <p style="margin: 0 0 28px; font-size: 16px; line-height: 1.6; color: #9A9A9A; max-width: 620px">Same three pages as now. The order is what changes, so the thing a visitor came to do is never more than one scroll away.</p>
+
+    <div class="g3" style="display: grid; gap: 18px">
+
+      <div class="card" style="padding: 28px">
+        <p class="label" style="margin: 0 0 16px">Home</p>
+        <ol style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 2.05; color: #D6D2CC">
+          <li>Hero, two paths</li>
+          <li>Trust bar, number and locations</li>
+          <li>Who we are</li>
+          <li>Four services</li>
+          <li>How a referral works</li>
+          <li><span style="color: #FFC80B">Stories, the two films</span></li>
+          <li>Testimonial</li>
+          <li>Contact and forms</li>
+        </ol>
+      </div>
+
+      <div class="card" style="padding: 28px">
+        <p class="label" style="margin: 0 0 16px">Services</p>
+        <ol style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 2.05; color: #D6D2CC">
+          <li>Intro, plan types</li>
+          <li>Daily living</li>
+          <li>Therapeutic and psychosocial</li>
+          <li>Community and cultural</li>
+          <li>Support coordination</li>
+          <li>Who we support</li>
+          <li>Referral</li>
+        </ol>
+      </div>
+
+      <div class="card" style="padding: 28px">
+        <p class="label" style="margin: 0 0 16px">About</p>
+        <ol style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 2.05; color: #D6D2CC">
+          <li>Banner</li>
+          <li>About Natcha, the name</li>
+          <li>Our values</li>
+          <li>Our team</li>
+          <li><span style="color: #FFC80B">Eric's Story</span></li>
+          <li>Community and cultural</li>
+          <li>Contact</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
